@@ -17,19 +17,23 @@ const Home = () => {
   }, []);
 
   let handleAscending = (e) => {
+    console.log(state);
     e.preventDefault();
     let ascending = state.sort((a, b) => {
       return a.id - b.id;
     });
-    setAscending(ascending);
+    var newarr = [...ascending];
+    setAscending(newarr);
   };
 
   let handleDescending = (e) => {
+    console.log(state);
     e.preventDefault();
     let descending = state.sort((a, b) => {
       return b.id - a.id;
     });
-    setDescending(descending);
+    var newarr = [...descending];
+    setDescending(newarr);
   };
 
   // let hasc = ascending.map((a) => {
